@@ -2,7 +2,7 @@
 /*
 Plugin Name: Custom Post Type Selector
 Plugin URI: http://wordpress.org/extend/plugins/custom-post-type-selector/
-Version: 1.0
+Version: 1.1
 Author: Tom Lynch
 Author URI: http://tomlynch.co.uk
 Description: Custom Post Type Selector allows you to select which post types should be included in the main loop of your blog, including custom post types.
