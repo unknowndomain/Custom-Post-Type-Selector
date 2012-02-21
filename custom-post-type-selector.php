@@ -34,6 +34,8 @@ class CustomPostTypeSelector {
         add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( &$this, 'filter_plugin_action_links' ), 10, 2 );
         add_action( 'admin_menu', array( &$this, 'register_admin_menu' ) );
         add_action( 'admin_init', array( &$this, 'register_setting' ) );
+        register_activation_hook( __FILE__, array( &$this, 'activation' ) );
+        register_deactivation_hook( __FILE__, array( &$this, 'deactivation' ) );
     }
     
     function parse_query( $query ) {
@@ -76,7 +78,7 @@ class CustomPostTypeSelector {
     }
     
     function register_options_page() {
-        $enabled = get_option( $this->setting, array() );
+        $enabled = get_option( $this->setting, array( 'post' ) );
         ?>
             <div class="wrap">
                 <?php screen_icon(); ?>
@@ -130,13 +132,15 @@ class CustomPostTypeSelector {
         foreach( get_post_types( array( 'public' => true ) ) as $pt ) {
             if( isset( $in[$pt] ) && $in[$pt] ) $out[] = $pt;
         }
-        add_settings_error( 
-            $this->setting, 
-            'cpt-selector-updated',
-            __( 'Your Settings have been saved', 'cpt-selector' ),
-            'updated'
-        );
         return $out;
+    }
+    
+    function activation() {
+        add_option( $this->setting, array( 'post' ) );
+    }
+    
+    function deactivation() {
+        delete_option( $this->setting );
     }
 }
 
