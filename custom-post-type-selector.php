@@ -41,9 +41,7 @@ class CustomPostTypeSelector {
     function parse_query( $query ) {
         if( ! $query->is_main_query() ) return;
         if( is_home() || is_search() || is_tax() || is_category() || is_tag() || is_archive() || is_feed() ) {
-            $enabled_post_types = get_option( $this->setting );
-            if ( ! is_array( $enabled_post_types ) )
-                $enabled_post_types = array( 'post' => 'true' );
+            $enabled_post_types = get_option( $this->setting, array( 'post' ) );
             $query->query_vars['post_type'] = $enabled_post_types;
         }
     }
