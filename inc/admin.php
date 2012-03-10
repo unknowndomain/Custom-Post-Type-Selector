@@ -4,7 +4,7 @@ class CustomPostTypeSelector {
     protected $setting = 'cpts-enabled-post-types';
     
     function __construct() {
-        add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( &$this, 'filter_plugin_action_links' ), 10, 2 );
+        add_filter( 'plugin_action_links_' . TLCD_CPTS_NAME, array( &$this, 'filter_plugin_action_links' ), 10, 2 );
         add_action( 'admin_menu', array( &$this, 'register_admin_menu' ) );
         add_action( 'admin_init', array( &$this, 'register_setting' ) );
     }

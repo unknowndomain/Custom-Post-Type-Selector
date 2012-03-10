@@ -24,6 +24,7 @@ License: GPLv3
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 define( 'TLCD_CPTS_PATH', plugin_dir_path( __FILE__ ) );
+define( 'TLCD_CPTS_NAME', plugin_basename( __FILE__ ) );
 
 if( is_admin() )
 {
