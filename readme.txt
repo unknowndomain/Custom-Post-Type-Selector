@@ -4,7 +4,7 @@ Donate link: http://supportus.cancerresearchuk.org/donate/
 Tags: custom, post, type, main, loop, query, the loop, post type, custom post type, cpt, custom post type, main loop, main query
 Requires at least: 3.3
 Tested up to: 3.3
-Stable tag: 1.1
+Stable tag: 1.2
 
 Custom Post Type Selector allows you to select which post types should be included in the main loop of your blog, including custom post types.
 
@@ -59,6 +59,9 @@ This plugin uses a function called [is_main_query()] which was not introduced un
 [is_main_query()]: http://codex.wordpress.org/Function_Reference/is_main_query
 
 == Changelog ==
+
+= 1.2 =
+* Fixes bug where the code effects the admin area as well as the front end, another big thanks to [Christopher Davis]!
 
 = 1.1 =
 * Switches to using Settings API, again thanks to [Christopher Davis]!
