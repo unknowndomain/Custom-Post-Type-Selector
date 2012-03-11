@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Custom Post Type Selector ===
 Contributors: unknowndomain, chrisguitarguy
 Donate link: http://supportus.cancerresearchuk.org/donate/
 Tags: custom, post, type, main, loop, query, the loop, post type, custom post type, cpt, custom post type, main loop, main query
