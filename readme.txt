@@ -3,7 +3,7 @@ Contributors: unknowndomain, chrisguitarguy
 Donate link: http://supportus.cancerresearchuk.org/donate/
 Tags: custom, post, type, main, loop, query, the loop, post type, custom post type, cpt, custom post type, main loop, main query
 Requires at least: 3.3
-Tested up to: 3.3
+Tested up to: 3.5
 Stable tag: 1.2
 
 Custom Post Type Selector allows you to select which post types should be included in the main loop of your blog, including custom post types.
